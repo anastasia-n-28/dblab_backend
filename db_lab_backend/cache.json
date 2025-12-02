@@ -2,7 +2,7 @@
   "history": [
     {
       "upToDate": true,
-      "lastUpdate": "2025-12-03T00:10:10.828Z"
+      "lastUpdate": "2025-12-03T01:08:59.760Z"
     }
   ],
   "chapters": [
@@ -885,6 +885,140 @@
       "photo": null
     }
   ],
+  "proposals": [
+    {
+      "proposal_Id": 1,
+      "name": "Smart Campus Assistant",
+      "description": "Chatbot for campus FAQs",
+      "status": "new",
+      "complexity": "medium",
+      "teacher_Id": 1,
+      "proposal_type_Id": null,
+      "direction_Id": 1
+    },
+    {
+      "proposal_Id": 2,
+      "name": "Sales Forecasting",
+      "description": "Time-series retail forecasting",
+      "status": "in_progress",
+      "complexity": "high",
+      "teacher_Id": 1,
+      "proposal_type_Id": null,
+      "direction_Id": 2
+    },
+    {
+      "proposal_Id": 3,
+      "name": "Vuln Scanner",
+      "description": "Lightweight web vuln scanner",
+      "status": "new",
+      "complexity": "high",
+      "teacher_Id": 1,
+      "proposal_type_Id": null,
+      "direction_Id": 3
+    },
+    {
+      "proposal_Id": 4,
+      "name": "Course Planner",
+      "description": "Study roadmap planning app",
+      "status": "review",
+      "complexity": "low",
+      "teacher_Id": 1,
+      "proposal_type_Id": null,
+      "direction_Id": 4
+    },
+    {
+      "proposal_Id": 5,
+      "name": "Fitness Tracker",
+      "description": "Cross-platform fitness tracker",
+      "status": "new",
+      "complexity": "medium",
+      "teacher_Id": 1,
+      "proposal_type_Id": null,
+      "direction_Id": 5
+    },
+    {
+      "proposal_Id": 6,
+      "name": "Розробка веб-сайту для кав'ярні",
+      "description": "Створити сайт на ASP.NET",
+      "status": "Available",
+      "complexity": "low",
+      "teacher_Id": 1,
+      "proposal_type_Id": 3,
+      "direction_Id": 1
+    },
+    {
+      "proposal_Id": 7,
+      "name": "Аналіз Big Data",
+      "description": "Аналіз великих даних за допомогою Python",
+      "status": "Assigned",
+      "complexity": "high",
+      "teacher_Id": 1,
+      "proposal_type_Id": 5,
+      "direction_Id": 2
+    },
+    {
+      "proposal_Id": 8,
+      "name": "Аналіз тональності студентських відгуків",
+      "description": "Розробка NLP моделі для аналізу текстових даних",
+      "status": "Completed",
+      "complexity": "high",
+      "teacher_Id": 1,
+      "proposal_type_Id": 1,
+      "direction_Id": 1
+    },
+    {
+      "proposal_Id": 9,
+      "name": "Telegram-бот для розкладу занять",
+      "description": "Інтеграція з API університету",
+      "status": "Completed",
+      "complexity": "medium",
+      "teacher_Id": 1,
+      "proposal_type_Id": 1,
+      "direction_Id": 2
+    },
+    {
+      "proposal_Id": 10,
+      "name": "Оптимізація запитів у PostgreSQL",
+      "description": "Дослідження індексів та планів виконання",
+      "status": "Completed",
+      "complexity": "high",
+      "teacher_Id": 1,
+      "proposal_type_Id": 2,
+      "direction_Id": 1
+    },
+    {
+      "proposal_Id": 11,
+      "name": "Тестова тема 2024",
+      "description": "Опис",
+      "status": "Completed",
+      "complexity": "high",
+      "teacher_Id": 1,
+      "proposal_type_Id": 1,
+      "direction_Id": 1
+    }
+  ],
+  "proposalTypes": [
+    {
+      "proposal_type_Id": 1,
+      "name": "Проєкт"
+    },
+    {
+      "proposal_type_Id": 2,
+      "name": "Дослідження"
+    },
+    {
+      "proposal_type_Id": 3,
+      "name": "Курсова робота"
+    },
+    {
+      "proposal_type_Id": 4,
+      "name": "Дипломна робота"
+    },
+    {
+      "proposal_type_Id": 5,
+      "name": "Магістерська дисертація"
+    }
+  ],
   "directions": [
     {
       "direction_Id": 1,
@@ -935,136 +1069,6 @@
       "direction_Id": 12,
       "name": "Реляційні та NoSQL СУБД",
       "description": "Порівняльний аналіз SQL та NoSQL рішень (MongoDB, Redis, Neo4j) для різних типів задач."
-    }
-  ],
-  "works": [
-    {
-      "work_Id": 1,
-      "attachment_date": "2025-10-30",
-      "review": null,
-      "comment": "Initial draft",
-      "name": "AI Assistant Draft",
-      "file": null,
-      "proposal_Id": 1,
-      "user_Id": 1
-    },
-    {
-      "work_Id": 2,
-      "attachment_date": "2025-10-30",
-      "review": "Looks promising",
-      "comment": null,
-      "name": "Forecasting EDA",
-      "file": null,
-      "proposal_Id": 2,
-      "user_Id": 1
-    },
-    {
-      "work_Id": 3,
-      "attachment_date": "2025-10-30",
-      "review": null,
-      "comment": null,
-      "name": "Scanner PoC",
-      "file": null,
-      "proposal_Id": 3,
-      "user_Id": 1
-    },
-    {
-      "work_Id": 4,
-      "attachment_date": "2025-10-30",
-      "review": "Please improve UX",
-      "comment": "Needs redesign",
-      "name": "Planner Prototype",
-      "file": null,
-      "proposal_Id": 4,
-      "user_Id": 1
-    },
-    {
-      "work_Id": 5,
-      "attachment_date": "2025-10-30",
-      "review": null,
-      "comment": "Add step counter",
-      "name": "Fitness MVP",
-      "file": null,
-      "proposal_Id": 5,
-      "user_Id": 1
-    },
-    {
-      "work_Id": 6,
-      "attachment_date": "2024-03-05",
-      "review": null,
-      "comment": "Затверджено план",
-      "name": "План роботи",
-      "file": "plan.docx",
-      "proposal_Id": 1,
-      "user_Id": 1
-    },
-    {
-      "work_Id": 7,
-      "attachment_date": "2024-04-10",
-      "review": "Є зауваження",
-      "comment": "Чорновик",
-      "name": "Розділ 1",
-      "file": "draft.pdf",
-      "proposal_Id": 1,
-      "user_Id": 1
-    },
-    {
-      "work_Id": 8,
-      "attachment_date": "2024-05-15",
-      "review": "Відмінно",
-      "comment": "Фінальна версія",
-      "name": "Дипломна робота",
-      "file": "final.pdf",
-      "proposal_Id": 1,
-      "user_Id": 1
-    }
-  ],
-  "proposalTypes": [
-    {
-      "proposal_type_Id": 1,
-      "name": "Проєкт"
-    },
-    {
-      "proposal_type_Id": 2,
-      "name": "Дослідження"
-    },
-    {
-      "proposal_type_Id": 3,
-      "name": "Курсова робота"
-    },
-    {
-      "proposal_type_Id": 4,
-      "name": "Дипломна робота"
-    },
-    {
-      "proposal_type_Id": 5,
-      "name": "Магістерська дисертація"
-    }
-  ],
-  "resultTypes": [
-    {
-      "result_type_Id": 1,
-      "name": "Стаття"
-    },
-    {
-      "result_type_Id": 2,
-      "name": "Тези доповіді"
-    },
-    {
-      "result_type_Id": 3,
-      "name": "Публікація"
-    },
-    {
-      "result_type_Id": 4,
-      "name": "Перемога"
-    },
-    {
-      "result_type_Id": 8,
-      "name": "Монографія"
-    },
-    {
-      "result_type_Id": 9,
-      "name": "Підручник"
     }
   ]
 }
