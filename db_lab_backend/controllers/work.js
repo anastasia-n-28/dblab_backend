@@ -5,8 +5,8 @@ const Work = require('../models/Relations').Work;
 
 const create = async (req, res) => {
     try {
-        const { attachment_date, review, comment, name, file, proposal_Id, user_Id } = req.body;
-        const work = await Work.create({ attachment_date, review, comment, name, file, proposal_Id, user_Id });
+        const { name, review, comment, attachment_date, file, proposal_Id, user_Id } = req.body;
+        const work = await Work.create({ name, review, comment, attachment_date, file, proposal_Id, user_Id });
         return res.status(201).json(work);
     } catch (error) {
         return res.status(500).json({ message: error.message });
@@ -15,11 +15,23 @@ const create = async (req, res) => {
 
 const getAll = async (req, res) => {
     try {
-        const cacheData = JSON.parse(fs.readFileSync(cache, 'utf-8'));
-        if (!cacheData.works) {
-            return res.status(404).json({ message: 'work not found in cache.' });
+        let cacheData = {};
+        if (fs.existsSync(cache)) {
+            try {
+                const fileContent = fs.readFileSync(cache, 'utf-8');
+                if (fileContent) cacheData = JSON.parse(fileContent);
+            } catch (err) { console.error(err); }
         }
-        return res.status(200).json(cacheData.works);
+
+        if (cacheData.works && cacheData.works.length > 0) {
+            return res.status(200).json(cacheData.works);
+        }
+
+        const works = await Work.findAll({});
+        cacheData.works = works;
+        fs.writeFileSync(cache, JSON.stringify(cacheData, null, 2));
+
+        return res.status(200).json(works);
     } catch (error) {
         return res.status(500).json({ message: error.message });
     }

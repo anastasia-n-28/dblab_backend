@@ -22,6 +22,7 @@ const teacherRoutes = require('./routes/teacher.js');
 const userRoutes = require('./routes/user.js');
 const authRoutes = require('./routes/auth.js');
 const cacheRoutes = require('./routes/cache.js');
+
 const directionRoutes = require('./routes/direction.js');
 const proposalTypeRoutes = require('./routes/proposalType.js');
 const proposalRoutes = require('./routes/proposal.js');
@@ -52,6 +53,7 @@ app.use('/teacher', teacherRoutes);
 app.use('/user', userRoutes);
 app.use('/auth', authRoutes);
 app.use('/cache', cacheRoutes);
+
 app.use('/direction', directionRoutes);
 app.use('/proposalType', proposalTypeRoutes);
 app.use('/proposal', proposalRoutes);

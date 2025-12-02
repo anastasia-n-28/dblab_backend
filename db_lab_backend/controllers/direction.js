@@ -15,12 +15,33 @@ const create = async (req, res) => {
 
 const getAll = async (req, res) => {
     try {
-        const cacheData = JSON.parse(fs.readFileSync(cache, 'utf-8'));
-        if (!cacheData.directions) {
-            return res.status(404).json({ message: 'direction not found in cache.' });
+        let cacheData = {};
+        if (fs.existsSync(cache)) {
+            try {
+                const fileContent = fs.readFileSync(cache, 'utf-8');
+                if (fileContent) {
+                    cacheData = JSON.parse(fileContent);
+                }
+            } catch (err) {
+                console.error("Error reading cache file:", err);
+            }
         }
-        return res.status(200).json(cacheData.directions);
+
+        if (cacheData.directions && cacheData.directions.length > 0) {
+            console.log('Serving from Cache');
+            return res.status(200).json(cacheData.directions);
+        }
+
+        console.log('Serving from Database');
+        const directions = await Direction.findAll({});
+
+        cacheData.directions = directions;
+        fs.writeFileSync(cache, JSON.stringify(cacheData, null, 2));
+
+        return res.status(200).json(directions);
+
     } catch (error) {
+        console.error(error);
         return res.status(500).json({ message: error.message });
     }
 };

@@ -15,11 +15,23 @@ const create = async (req, res) => {
 
 const getAll = async (req, res) => {
     try {
-        const cacheData = JSON.parse(fs.readFileSync(cache, 'utf-8'));
-        if (!cacheData.resultTypes) {
-            return res.status(404).json({ message: 'resultType not found in cache.' });
+        let cacheData = {};
+        if (fs.existsSync(cache)) {
+            try {
+                const fileContent = fs.readFileSync(cache, 'utf-8');
+                if (fileContent) cacheData = JSON.parse(fileContent);
+            } catch (err) { console.error(err); }
         }
-        return res.status(200).json(cacheData.resultTypes);
+
+        if (cacheData.resultTypes && cacheData.resultTypes.length > 0) {
+            return res.status(200).json(cacheData.resultTypes);
+        }
+
+        const resultTypes = await ResultType.findAll({});
+        cacheData.resultTypes = resultTypes;
+        fs.writeFileSync(cache, JSON.stringify(cacheData, null, 2));
+
+        return res.status(200).json(resultTypes);
     } catch (error) {
         return res.status(500).json({ message: error.message });
     }

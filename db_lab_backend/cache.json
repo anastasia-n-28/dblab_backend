@@ -2,7 +2,7 @@
   "history": [
     {
       "upToDate": true,
-      "lastUpdate": "2025-12-01T23:47:43.173Z"
+      "lastUpdate": "2025-12-03T00:10:10.828Z"
     }
   ],
   "chapters": [
@@ -883,6 +883,188 @@
       "level": "",
       "teacher_role": "Експерт",
       "photo": null
+    }
+  ],
+  "directions": [
+    {
+      "direction_Id": 1,
+      "name": "Artificial Intelligence",
+      "description": "Research and projects in AI and ML"
+    },
+    {
+      "direction_Id": 2,
+      "name": "Data Science",
+      "description": "Analytics, modeling, and data engineering"
+    },
+    {
+      "direction_Id": 3,
+      "name": "Cybersecurity",
+      "description": "Security assessments and tooling"
+    },
+    {
+      "direction_Id": 4,
+      "name": "Web Development",
+      "description": "Frontend/Backend web projects"
+    },
+    {
+      "direction_Id": 5,
+      "name": "Mobile Development",
+      "description": "Android and iOS applications"
+    },
+    {
+      "direction_Id": 6,
+      "name": "Моделювання БД",
+      "description": "Вивчення методів побудови концептуальних, логічних та фізичних моделей даних (ER-діаграми, UML)."
+    },
+    {
+      "direction_Id": 7,
+      "name": "Високопродуктивні БД",
+      "description": "Дослідження методів оптимізації запитів, індексування, транзакцій та роботи з великими навантаженнями."
+    },
+    {
+      "direction_Id": 8,
+      "name": "Експертиза проєктів БД",
+      "description": "Аудит існуючих рішень, перевірка на відповідність стандартам нормалізації та безпеки."
+    },
+    {
+      "direction_Id": 9,
+      "name": "Реінжиніринг БД",
+      "description": "Аналіз та перебудова застарілих систем, міграція даних та оптимізація структури."
+    },
+    {
+      "direction_Id": 12,
+      "name": "Реляційні та NoSQL СУБД",
+      "description": "Порівняльний аналіз SQL та NoSQL рішень (MongoDB, Redis, Neo4j) для різних типів задач."
+    }
+  ],
+  "works": [
+    {
+      "work_Id": 1,
+      "attachment_date": "2025-10-30",
+      "review": null,
+      "comment": "Initial draft",
+      "name": "AI Assistant Draft",
+      "file": null,
+      "proposal_Id": 1,
+      "user_Id": 1
+    },
+    {
+      "work_Id": 2,
+      "attachment_date": "2025-10-30",
+      "review": "Looks promising",
+      "comment": null,
+      "name": "Forecasting EDA",
+      "file": null,
+      "proposal_Id": 2,
+      "user_Id": 1
+    },
+    {
+      "work_Id": 3,
+      "attachment_date": "2025-10-30",
+      "review": null,
+      "comment": null,
+      "name": "Scanner PoC",
+      "file": null,
+      "proposal_Id": 3,
+      "user_Id": 1
+    },
+    {
+      "work_Id": 4,
+      "attachment_date": "2025-10-30",
+      "review": "Please improve UX",
+      "comment": "Needs redesign",
+      "name": "Planner Prototype",
+      "file": null,
+      "proposal_Id": 4,
+      "user_Id": 1
+    },
+    {
+      "work_Id": 5,
+      "attachment_date": "2025-10-30",
+      "review": null,
+      "comment": "Add step counter",
+      "name": "Fitness MVP",
+      "file": null,
+      "proposal_Id": 5,
+      "user_Id": 1
+    },
+    {
+      "work_Id": 6,
+      "attachment_date": "2024-03-05",
+      "review": null,
+      "comment": "Затверджено план",
+      "name": "План роботи",
+      "file": "plan.docx",
+      "proposal_Id": 1,
+      "user_Id": 1
+    },
+    {
+      "work_Id": 7,
+      "attachment_date": "2024-04-10",
+      "review": "Є зауваження",
+      "comment": "Чорновик",
+      "name": "Розділ 1",
+      "file": "draft.pdf",
+      "proposal_Id": 1,
+      "user_Id": 1
+    },
+    {
+      "work_Id": 8,
+      "attachment_date": "2024-05-15",
+      "review": "Відмінно",
+      "comment": "Фінальна версія",
+      "name": "Дипломна робота",
+      "file": "final.pdf",
+      "proposal_Id": 1,
+      "user_Id": 1
+    }
+  ],
+  "proposalTypes": [
+    {
+      "proposal_type_Id": 1,
+      "name": "Проєкт"
+    },
+    {
+      "proposal_type_Id": 2,
+      "name": "Дослідження"
+    },
+    {
+      "proposal_type_Id": 3,
+      "name": "Курсова робота"
+    },
+    {
+      "proposal_type_Id": 4,
+      "name": "Дипломна робота"
+    },
+    {
+      "proposal_type_Id": 5,
+      "name": "Магістерська дисертація"
+    }
+  ],
+  "resultTypes": [
+    {
+      "result_type_Id": 1,
+      "name": "Стаття"
+    },
+    {
+      "result_type_Id": 2,
+      "name": "Тези доповіді"
+    },
+    {
+      "result_type_Id": 3,
+      "name": "Публікація"
+    },
+    {
+      "result_type_Id": 4,
+      "name": "Перемога"
+    },
+    {
+      "result_type_Id": 8,
+      "name": "Монографія"
+    },
+    {
+      "result_type_Id": 9,
+      "name": "Підручник"
     }
   ]
 }
