@@ -1,0 +1,888 @@
+{
+  "history": [
+    {
+      "upToDate": true,
+      "lastUpdate": "2025-12-01T23:47:43.173Z"
+    }
+  ],
+  "chapters": [
+    {
+      "chapter_Id": 1,
+      "level_Id": 1,
+      "development_direction_Id": 1,
+      "chapter_name": "Мова запитів SQL (основи)"
+    },
+    {
+      "chapter_Id": 2,
+      "level_Id": 1,
+      "development_direction_Id": 1,
+      "chapter_name": "Реляційні БД"
+    },
+    {
+      "chapter_Id": 3,
+      "level_Id": 3,
+      "development_direction_Id": 1,
+      "chapter_name": "Мова запитів SQL (advanced)"
+    },
+    {
+      "chapter_Id": 4,
+      "level_Id": 3,
+      "development_direction_Id": 1,
+      "chapter_name": "NoSQL-системи"
+    },
+    {
+      "chapter_Id": 5,
+      "level_Id": 2,
+      "development_direction_Id": 1,
+      "chapter_name": "Реляційні БД (advanced)"
+    },
+    {
+      "chapter_Id": 6,
+      "level_Id": 3,
+      "development_direction_Id": 2,
+      "chapter_name": "Cloud Azure "
+    },
+    {
+      "chapter_Id": 7,
+      "level_Id": 1,
+      "development_direction_Id": 2,
+      "chapter_name": "Введення в реляційні БД"
+    },
+    {
+      "chapter_Id": 8,
+      "level_Id": 1,
+      "development_direction_Id": 2,
+      "chapter_name": "SQL для починаючих"
+    },
+    {
+      "chapter_Id": 9,
+      "level_Id": 2,
+      "development_direction_Id": 2,
+      "chapter_name": "Поглиблений SQL"
+    },
+    {
+      "chapter_Id": 10,
+      "level_Id": 2,
+      "development_direction_Id": 1,
+      "chapter_name": "Сховища даних"
+    },
+    {
+      "chapter_Id": 11,
+      "level_Id": 5,
+      "development_direction_Id": 1,
+      "chapter_name": "Elastic"
+    },
+    {
+      "chapter_Id": 12,
+      "level_Id": 3,
+      "development_direction_Id": 1,
+      "chapter_name": "Cloud Azure"
+    }
+  ],
+  "developmentDirections": [
+    {
+      "development_direction_Id": 1,
+      "development_direction_name": "Data Software Engineering",
+      "development_direction_Description": "Напрям, що поєднує принципи розробки програмного забезпечення з управлінням, обробленням та аналізом для створення систем, що працюють з великими обсягами даних. Охоплює задачі проєктування сховищ даних, обробку даних та розробку алгоритмів."
+    },
+    {
+      "development_direction_Id": 2,
+      "development_direction_name": "Data Analytics Engineering",
+      "development_direction_Description": "Напрям, що пов'язаний зі збором, обробкою, аналізом та трансформацією великих наборів даних для прийняття зважених бізнес-рішень з використанням різних методів, інструментів і технологій для виявлення закономірностей і тенденцій."
+    },
+    {
+      "development_direction_Id": 3,
+      "development_direction_name": "Date Architect",
+      "development_direction_Description": "ІТ-напрям (професія), що передбачає знання та навички з робота з БД та СУБД. "
+    },
+    {
+      "development_direction_Id": 5,
+      "development_direction_name": ".Net Develepment",
+      "development_direction_Description": "Напрям, що базується на використання .NET для створення веб-, десктопних та мобільних додатків, ігор, інтернета речей (IoT) та інших платформ, а також для автоматизації тестування, машинного навчання та VR/AR. "
+    },
+    {
+      "development_direction_Id": 6,
+      "development_direction_name": "Data Science",
+      "development_direction_Description": "Напрям на стику математики, програмування та бізнесу, допомогає виявити корисні інсайти з даних."
+    },
+    {
+      "development_direction_Id": 7,
+      "development_direction_name": "Database Developer",
+      "development_direction_Description": "Посада, яка існує в деяких компаніях"
+    }
+  ],
+  "disciplines": [
+    {
+      "discipline_Id": 1,
+      "discipline_name": "Бази даних",
+      "discipline_Description": "Метою дисципліни «Бази даних» є вивчення основних питань проєктування й організації баз даних (БД), вивчення мови SQL, ознайомлення з сучасними системами управління БД (СУБД), придбання практичних навичок проєктування, розробки та експлуатації БД та інформаційних систем (ІС), що створено на їхній основі. ",
+      "discipline_type": "Обов'язкова",
+      "volume": 6,
+      "syllabus_link": "https://software.nure.ua/wp-content/uploads/2025/03/3_bd-sylabus-2025_26_mazurova-1.pdf"
+    },
+    {
+      "discipline_Id": 5,
+      "discipline_name": "Додаткові розділи теорії баз даних",
+      "discipline_Description": "Метою курсу є вивчення додаткових питань теорії баз даних, що не увійшли до базового курсу, а саме: додаткові розділи мови SQL, проектування та розробка високопродуктивних баз даних, проектування гетерогенних баз даних та робота с NoSQL-системами, придбання практичних навичок проектування, розробки та експлуатації баз даних та інформаційних систем, створених на їх основі.",
+      "discipline_type": "Вибіркова",
+      "volume": 5,
+      "syllabus_link": "https://software.nure.ua/wp-content/uploads/2024/04/8_7_drtbd-sylabus-2024.pdf"
+    },
+    {
+      "discipline_Id": 6,
+      "discipline_name": "NoSQL-системи",
+      "discipline_Description": "Шардінг та реплікування. Теорема САР. Основи шаблона Map-Reduce. Об’єктно-орієнтовані та об’єктно-реляційні БД. Документоорієнтовані БД. Графові бази даних",
+      "discipline_type": "Вибіркова",
+      "volume": 5,
+      "syllabus_link": "https://software.nure.ua/wp-content/uploads/2024/04/6_7_nosql-sylabus-2024.pdf"
+    },
+    {
+      "discipline_Id": 7,
+      "discipline_name": "Робота з даними на платформі .Net",
+      "discipline_Description": "Основи .NET Framework. Платформа динамічних даних ASP.NET. Використання засобів LINQ. Технології об’єктно-реляційного мапінгу. Entity Framework (EF).",
+      "discipline_type": "Вибіркова",
+      "volume": 6,
+      "syllabus_link": "https://software.nure.ua/wp-content/uploads/2024/04/6_1_rd-net-sylabus-2024.pdf"
+    },
+    {
+      "discipline_Id": 8,
+      "discipline_name": "Серверні рішення баз даних",
+      "discipline_Description": "",
+      "discipline_type": "Вибіркова",
+      "volume": 5,
+      "syllabus_link": ""
+    },
+    {
+      "discipline_Id": 9,
+      "discipline_name": "Корпоративні інформаційні системи",
+      "discipline_Description": "",
+      "discipline_type": "Вибіркова",
+      "volume": 5,
+      "syllabus_link": ""
+    },
+    {
+      "discipline_Id": 10,
+      "discipline_name": "Хмарні технології баз даних",
+      "discipline_Description": "",
+      "discipline_type": "Вибіркова",
+      "volume": 5,
+      "syllabus_link": ""
+    }
+  ],
+  "disciplineSkills": [
+    {
+      "disciplineSkill_Id": 1,
+      "discipline_Id": 1,
+      "skill_Id": 1,
+      "level_Id": 1,
+      "learning_type": "3 лк, 3 пз, 2 лб"
+    },
+    {
+      "disciplineSkill_Id": 2,
+      "discipline_Id": 1,
+      "skill_Id": 7,
+      "level_Id": 2,
+      "learning_type": "6 лк, 3 пз, КП"
+    },
+    {
+      "disciplineSkill_Id": 3,
+      "discipline_Id": 1,
+      "skill_Id": 13,
+      "level_Id": 1,
+      "learning_type": "2 лк"
+    },
+    {
+      "disciplineSkill_Id": 4,
+      "discipline_Id": 5,
+      "skill_Id": 4,
+      "level_Id": 1,
+      "learning_type": "1 лк, 1 лб"
+    },
+    {
+      "disciplineSkill_Id": 5,
+      "discipline_Id": 5,
+      "skill_Id": 12,
+      "level_Id": 2,
+      "learning_type": "1 лк, 1 пз, 1 лб"
+    },
+    {
+      "disciplineSkill_Id": 6,
+      "discipline_Id": 5,
+      "skill_Id": 10,
+      "level_Id": 2,
+      "learning_type": "4 лк, 2 пз, 1 лб"
+    },
+    {
+      "disciplineSkill_Id": 7,
+      "discipline_Id": 6,
+      "skill_Id": 5,
+      "level_Id": 1,
+      "learning_type": "1 лк, 1 лб"
+    },
+    {
+      "disciplineSkill_Id": 8,
+      "discipline_Id": 5,
+      "skill_Id": 8,
+      "level_Id": 2,
+      "learning_type": "1 лк,  лб, пз"
+    },
+    {
+      "disciplineSkill_Id": 9,
+      "discipline_Id": 1,
+      "skill_Id": 15,
+      "level_Id": 1,
+      "learning_type": "2 лб"
+    },
+    {
+      "disciplineSkill_Id": 10,
+      "discipline_Id": 1,
+      "skill_Id": 16,
+      "level_Id": 1,
+      "learning_type": "2 лб"
+    },
+    {
+      "disciplineSkill_Id": 11,
+      "discipline_Id": 1,
+      "skill_Id": 22,
+      "level_Id": 1,
+      "learning_type": "1 лк, 1 пз, 1 лб"
+    },
+    {
+      "disciplineSkill_Id": 12,
+      "discipline_Id": 1,
+      "skill_Id": 21,
+      "level_Id": 1,
+      "learning_type": "1 лк"
+    },
+    {
+      "disciplineSkill_Id": 13,
+      "discipline_Id": 1,
+      "skill_Id": 20,
+      "level_Id": 1,
+      "learning_type": "1 лк"
+    },
+    {
+      "disciplineSkill_Id": 14,
+      "discipline_Id": 5,
+      "skill_Id": 20,
+      "level_Id": 2,
+      "learning_type": "1 лк, 1 лб"
+    },
+    {
+      "disciplineSkill_Id": 15,
+      "discipline_Id": 8,
+      "skill_Id": 20,
+      "level_Id": 2,
+      "learning_type": "2 лк, 2 лб, 2 пз"
+    },
+    {
+      "disciplineSkill_Id": 16,
+      "discipline_Id": 1,
+      "skill_Id": 23,
+      "level_Id": 2,
+      "learning_type": "1 лк, пз, лб"
+    },
+    {
+      "disciplineSkill_Id": 17,
+      "discipline_Id": 1,
+      "skill_Id": 24,
+      "level_Id": 1,
+      "learning_type": "1 лк"
+    },
+    {
+      "disciplineSkill_Id": 18,
+      "discipline_Id": 1,
+      "skill_Id": 26,
+      "level_Id": 2,
+      "learning_type": "1 лк, 1 пз, 1 лб"
+    },
+    {
+      "disciplineSkill_Id": 19,
+      "discipline_Id": 1,
+      "skill_Id": 31,
+      "level_Id": 1,
+      "learning_type": "1 лк"
+    },
+    {
+      "disciplineSkill_Id": 20,
+      "discipline_Id": 8,
+      "skill_Id": 31,
+      "level_Id": 2,
+      "learning_type": "1 лк, 1 пз, 1 лб"
+    },
+    {
+      "disciplineSkill_Id": 21,
+      "discipline_Id": 5,
+      "skill_Id": 19,
+      "level_Id": 1,
+      "learning_type": "1 лк, 1 лб"
+    },
+    {
+      "disciplineSkill_Id": 22,
+      "discipline_Id": 5,
+      "skill_Id": 17,
+      "level_Id": 1,
+      "learning_type": "1 лк, пз"
+    },
+    {
+      "disciplineSkill_Id": 23,
+      "discipline_Id": 6,
+      "skill_Id": 17,
+      "level_Id": 1,
+      "learning_type": "1 лк"
+    },
+    {
+      "disciplineSkill_Id": 24,
+      "discipline_Id": 8,
+      "skill_Id": 15,
+      "level_Id": 2,
+      "learning_type": "4 лк, 2 пз, 3 лб"
+    },
+    {
+      "disciplineSkill_Id": 25,
+      "discipline_Id": 9,
+      "skill_Id": 16,
+      "level_Id": 2,
+      "learning_type": "4 лк, 2 пз, 3 лб"
+    },
+    {
+      "disciplineSkill_Id": 26,
+      "discipline_Id": 1,
+      "skill_Id": 30,
+      "level_Id": 1,
+      "learning_type": "лк"
+    },
+    {
+      "disciplineSkill_Id": 27,
+      "discipline_Id": 5,
+      "skill_Id": 30,
+      "level_Id": 2,
+      "learning_type": "1 лк, 1 пз, 1 лб"
+    },
+    {
+      "disciplineSkill_Id": 28,
+      "discipline_Id": 8,
+      "skill_Id": 30,
+      "level_Id": 2,
+      "learning_type": "1 лк, 1 пз, 1 лб"
+    },
+    {
+      "disciplineSkill_Id": 29,
+      "discipline_Id": 10,
+      "skill_Id": 32,
+      "level_Id": 2,
+      "learning_type": "теорія та практика"
+    }
+  ],
+  "disciplineTeachers": [
+    {
+      "disciplineTeacher_Id": 1,
+      "teacher_Id": 1,
+      "discipline_Id": 1,
+      "language_Id": 1,
+      "beginning_Year": 2003
+    },
+    {
+      "disciplineTeacher_Id": 2,
+      "teacher_Id": 1,
+      "discipline_Id": 5,
+      "language_Id": 1,
+      "beginning_Year": 2018
+    },
+    {
+      "disciplineTeacher_Id": 3,
+      "teacher_Id": 3,
+      "discipline_Id": 6,
+      "language_Id": 1,
+      "beginning_Year": 2018
+    },
+    {
+      "disciplineTeacher_Id": 4,
+      "teacher_Id": 3,
+      "discipline_Id": 7,
+      "language_Id": 1,
+      "beginning_Year": 2010
+    },
+    {
+      "disciplineTeacher_Id": 5,
+      "teacher_Id": 3,
+      "discipline_Id": 8,
+      "language_Id": 1,
+      "beginning_Year": 2019
+    },
+    {
+      "disciplineTeacher_Id": 6,
+      "teacher_Id": 3,
+      "discipline_Id": 9,
+      "language_Id": 1,
+      "beginning_Year": 2015
+    },
+    {
+      "disciplineTeacher_Id": 7,
+      "teacher_Id": 2,
+      "discipline_Id": 10,
+      "language_Id": 1,
+      "beginning_Year": 2019
+    }
+  ],
+  "events": [
+    {
+      "event_Id": 1,
+      "teacher_Id": 4,
+      "lesson_Id": 5,
+      "event_name": "Майстер-клас з роботи з БД в Node.js",
+      "type": "Майстер-клас",
+      "format": "online",
+      "begin_date": "17:30:00",
+      "status": "Заплановано"
+    },
+    {
+      "event_Id": 2,
+      "teacher_Id": 1,
+      "lesson_Id": 6,
+      "event_name": "Проєкт Галкіна Миколи",
+      "type": "Презентація",
+      "format": "online",
+      "begin_date": "17:30:00",
+      "status": "Заплановано"
+    },
+    {
+      "event_Id": 3,
+      "teacher_Id": 1,
+      "lesson_Id": 6,
+      "event_name": "Проєкт Шумейко Антона",
+      "type": "Презентація",
+      "format": "online",
+      "begin_date": "17:45:00",
+      "status": "Заплановано"
+    },
+    {
+      "event_Id": 4,
+      "teacher_Id": 1,
+      "lesson_Id": 6,
+      "event_name": "Проєкт Генбач Романа",
+      "type": "Презентація",
+      "format": "online",
+      "begin_date": "18:00:00",
+      "status": "Скасовано"
+    }
+  ],
+  "languages": [
+    {
+      "language_Id": 1,
+      "language_name": "Українська мова"
+    },
+    {
+      "language_Id": 2,
+      "language_name": "Англійська мова"
+    }
+  ],
+  "lessons": [
+    {
+      "lesson_Id": 1,
+      "name": "Планове заняття гуртка",
+      "lesson_date": "2025-02-03",
+      "lesson_time": "16:30:00",
+      "link": "https://meet.google.com/igb-viyn-qwb"
+    },
+    {
+      "lesson_Id": 2,
+      "name": "Планове заняття гуртка",
+      "lesson_date": "2025-02-10",
+      "lesson_time": "16:30:00",
+      "link": "https://meet.google.com/igb-viyn-qwb"
+    },
+    {
+      "lesson_Id": 3,
+      "name": "Планове заняття гуртка",
+      "lesson_date": "2025-02-17",
+      "lesson_time": "16:30:00",
+      "link": "https://meet.google.com/igb-viyn-qwb"
+    },
+    {
+      "lesson_Id": 4,
+      "name": "Планове заняття гуртка",
+      "lesson_date": "2025-05-05",
+      "lesson_time": "16:30:00",
+      "link": "https://meet.google.com/igb-viyn-qwb"
+    },
+    {
+      "lesson_Id": 5,
+      "name": "Спеціальне заняття гуртка",
+      "lesson_date": "2025-05-07",
+      "lesson_time": "17:00:00",
+      "link": "https://meet.google.com/igb-viyn-qwb"
+    },
+    {
+      "lesson_Id": 6,
+      "name": "Презентації проєктів БД бакалаврів",
+      "lesson_date": "2025-05-09",
+      "lesson_time": "16:30:00",
+      "link": "https://meet.google.com/igb-viyn-qwb"
+    }
+  ],
+  "levels": [
+    {
+      "level_Id": 1,
+      "level_name": "Beginner"
+    },
+    {
+      "level_Id": 2,
+      "level_name": "Fundamentals"
+    },
+    {
+      "level_Id": 3,
+      "level_name": "Specialization"
+    },
+    {
+      "level_Id": 4,
+      "level_name": "Basic"
+    },
+    {
+      "level_Id": 5,
+      "level_name": "Research"
+    }
+  ],
+  "materials": [
+    {
+      "material_Id": 1,
+      "event_Id": 2,
+      "material_name": "Схема БД Галкіна М.",
+      "file": "https://drive.google.com/file/d/1CGxEJwc-bodpDpJCNY7RzB76YbNEuNnG/view?usp=drive_link",
+      "material_type": "Логічна модель БД"
+    },
+    {
+      "material_Id": 2,
+      "event_Id": 3,
+      "material_name": "ER-діаграма Шумейко А.",
+      "file": "https://drive.google.com/file/d/1I25qyIQ-ZU_2WHQTKh7rVbwCagx1HG2A/view?usp=drive_link",
+      "material_type": "ER-діаграма"
+    },
+    {
+      "material_Id": 3,
+      "event_Id": 3,
+      "material_name": "Модель графової БД",
+      "file": "https://drive.google.com/file/d/1a5lgnOee8mTtF6dGxpLoTWQ2r5560xQd/view?usp=drive_link",
+      "material_type": "Логічна модель БД"
+    }
+  ],
+  "skills": [
+    {
+      "skill_Id": 1,
+      "skill_name": "SQL (основи DDL та DML)"
+    },
+    {
+      "skill_Id": 3,
+      "skill_name": "Концептуальне моделювання баз даних"
+    },
+    {
+      "skill_Id": 4,
+      "skill_name": "Neo4J"
+    },
+    {
+      "skill_Id": 5,
+      "skill_name": "MongoDB"
+    },
+    {
+      "skill_Id": 6,
+      "skill_name": "ER-моделювання БД"
+    },
+    {
+      "skill_Id": 7,
+      "skill_name": "Проєктування реляційних БД"
+    },
+    {
+      "skill_Id": 8,
+      "skill_name": "SQL (рекурсивні запити)"
+    },
+    {
+      "skill_Id": 9,
+      "skill_name": "SQL (робота з деревами)"
+    },
+    {
+      "skill_Id": 10,
+      "skill_name": "Проєктування гетерогенних БД"
+    },
+    {
+      "skill_Id": 11,
+      "skill_name": "Нормалізація (1NF, 2NF, 3 NF, BCNF)"
+    },
+    {
+      "skill_Id": 12,
+      "skill_name": "Денормалізація"
+    },
+    {
+      "skill_Id": 13,
+      "skill_name": "SQL (TCL)"
+    },
+    {
+      "skill_Id": 14,
+      "skill_name": "SQL (DCL)"
+    },
+    {
+      "skill_Id": 15,
+      "skill_name": "MS SQL Server"
+    },
+    {
+      "skill_Id": 16,
+      "skill_name": "Oracle"
+    },
+    {
+      "skill_Id": 17,
+      "skill_name": "САР теорема"
+    },
+    {
+      "skill_Id": 18,
+      "skill_name": "Оптимізація запитів"
+    },
+    {
+      "skill_Id": 19,
+      "skill_name": "ШІ для баз даних"
+    },
+    {
+      "skill_Id": 20,
+      "skill_name": "Збережені процедури та тригери"
+    },
+    {
+      "skill_Id": 21,
+      "skill_name": "Аномалії в РБД"
+    },
+    {
+      "skill_Id": 22,
+      "skill_name": "SQL Joins"
+    },
+    {
+      "skill_Id": 23,
+      "skill_name": "SQL Constraints (Keys, Not Null, Check, Unique, Default)"
+    },
+    {
+      "skill_Id": 24,
+      "skill_name": "Огляд NoSQL-систем"
+    },
+    {
+      "skill_Id": 25,
+      "skill_name": "SQL (SET-оператори)"
+    },
+    {
+      "skill_Id": 26,
+      "skill_name": "SQL WHERE/HAVING/ORDER BY Clauses"
+    },
+    {
+      "skill_Id": 27,
+      "skill_name": "Window Functions and Frames"
+    },
+    {
+      "skill_Id": 28,
+      "skill_name": "Проєктування транзакцій"
+    },
+    {
+      "skill_Id": 29,
+      "skill_name": "OLTP vs OLAP"
+    },
+    {
+      "skill_Id": 30,
+      "skill_name": "Query Execution Plan"
+    },
+    {
+      "skill_Id": 31,
+      "skill_name": "Індексація в БД"
+    },
+    {
+      "skill_Id": 32,
+      "skill_name": "Azure"
+    }
+  ],
+  "skillChapters": [
+    {
+      "skillChapter_Id": 19,
+      "skill_Id": 3,
+      "chapter_Id": 2
+    },
+    {
+      "skillChapter_Id": 20,
+      "skill_Id": 6,
+      "chapter_Id": 2
+    },
+    {
+      "skillChapter_Id": 21,
+      "skill_Id": 7,
+      "chapter_Id": 2
+    },
+    {
+      "skillChapter_Id": 22,
+      "skill_Id": 11,
+      "chapter_Id": 2
+    },
+    {
+      "skillChapter_Id": 23,
+      "skill_Id": 12,
+      "chapter_Id": 5
+    },
+    {
+      "skillChapter_Id": 26,
+      "skill_Id": 13,
+      "chapter_Id": 1
+    },
+    {
+      "skillChapter_Id": 27,
+      "skill_Id": 1,
+      "chapter_Id": 1
+    },
+    {
+      "skillChapter_Id": 28,
+      "skill_Id": 14,
+      "chapter_Id": 1
+    },
+    {
+      "skillChapter_Id": 29,
+      "skill_Id": 8,
+      "chapter_Id": 3
+    },
+    {
+      "skillChapter_Id": 30,
+      "skill_Id": 9,
+      "chapter_Id": 3
+    },
+    {
+      "skillChapter_Id": 31,
+      "skill_Id": 7,
+      "chapter_Id": 7
+    },
+    {
+      "skillChapter_Id": 32,
+      "skill_Id": 23,
+      "chapter_Id": 7
+    },
+    {
+      "skillChapter_Id": 33,
+      "skill_Id": 21,
+      "chapter_Id": 7
+    },
+    {
+      "skillChapter_Id": 34,
+      "skill_Id": 11,
+      "chapter_Id": 7
+    },
+    {
+      "skillChapter_Id": 38,
+      "skill_Id": 25,
+      "chapter_Id": 8
+    },
+    {
+      "skillChapter_Id": 39,
+      "skill_Id": 22,
+      "chapter_Id": 8
+    },
+    {
+      "skillChapter_Id": 40,
+      "skill_Id": 1,
+      "chapter_Id": 8
+    },
+    {
+      "skillChapter_Id": 44,
+      "skill_Id": 13,
+      "chapter_Id": 9
+    },
+    {
+      "skillChapter_Id": 45,
+      "skill_Id": 14,
+      "chapter_Id": 9
+    },
+    {
+      "skillChapter_Id": 46,
+      "skill_Id": 27,
+      "chapter_Id": 9
+    },
+    {
+      "skillChapter_Id": 47,
+      "skill_Id": 29,
+      "chapter_Id": 9
+    },
+    {
+      "skillChapter_Id": 51,
+      "skill_Id": 31,
+      "chapter_Id": 10
+    },
+    {
+      "skillChapter_Id": 52,
+      "skill_Id": 30,
+      "chapter_Id": 10
+    },
+    {
+      "skillChapter_Id": 53,
+      "skill_Id": 29,
+      "chapter_Id": 10
+    },
+    {
+      "skillChapter_Id": 54,
+      "skill_Id": 20,
+      "chapter_Id": 10
+    },
+    {
+      "skillChapter_Id": 55,
+      "skill_Id": 5,
+      "chapter_Id": 4
+    },
+    {
+      "skillChapter_Id": 56,
+      "skill_Id": 4,
+      "chapter_Id": 4
+    },
+    {
+      "skillChapter_Id": 57,
+      "skill_Id": 17,
+      "chapter_Id": 4
+    },
+    {
+      "skillChapter_Id": 58,
+      "skill_Id": 32,
+      "chapter_Id": 6
+    }
+  ],
+  "teachers": [
+    {
+      "teacher_Id": 1,
+      "user_Id": 6,
+      "full_name": "Мазурова Оксана Олексіївна",
+      "place_of_Employment": "Кафедра ПІ",
+      "position": "Доцент",
+      "text": "Лекційні курси: Бази даних, Додаткові розділи теорії баз даних, Методи оптимізації та теорія ігор, Моделі та методи теорії прийняття рішень. Проводить керівництво науковою роботою аспірантів, магістрів та бакалаврів.",
+      "level": "К.т.н.",
+      "teacher_role": "Керівник гуртка",
+      "photo": null
+    },
+    {
+      "teacher_Id": 2,
+      "user_Id": 7,
+      "full_name": "Кравець Наталя Сергіївна",
+      "place_of_Employment": "Кафедра Програмної інженерії ХНУРЕ",
+      "position": "Доцент",
+      "text": "Лектор з дисципліни \"Хмарні технології баз даних\"",
+      "level": "К.т.н.",
+      "teacher_role": "",
+      "photo": null
+    },
+    {
+      "teacher_Id": 3,
+      "user_Id": 8,
+      "full_name": "Широкопєтлева Марія Сергіївна",
+      "place_of_Employment": "Кафедра Програмної інженерії ХНУРЕ",
+      "position": "Старший викладач",
+      "text": "Лектор з дисциплін \"Серверні рішення баз даних\", \"NoSQL-системи\", \"Корпоративні інформаційні системи\"",
+      "level": "",
+      "teacher_role": "Керівник гуртка",
+      "photo": null
+    },
+    {
+      "teacher_Id": 4,
+      "user_Id": 9,
+      "full_name": "Зибіна Катерина Вікторівна",
+      "place_of_Employment": "Кафедра Програмної інженерії ХНУРЕ, Sigma Software",
+      "position": "Старший викладач",
+      "text": "Junior L&D Specialist у Sigma Software та Trainer у Sigma Software University",
+      "level": "",
+      "teacher_role": "Експерт",
+      "photo": null
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+const path = require('path');
+const fs = require('fs');
+const cache = path.join(__dirname, '..', 'cache.json');
+const Result = require('../models/Relations').Result;
+
+const create = async (req, res) => {
+    try {
+        const { name, year, pages, full_name, work_Id, result_type_Id, magazine_Id, conference_Id, competition_Id } = req.body;
+        const result = await Result.create({ name, year, pages, full_name, work_Id, result_type_Id, magazine_Id, conference_Id, competition_Id });
+        return res.status(201).json(result);
+    } catch (error) {
+        return res.status(500).json({ message: error.message });
+    }
+};
+
+const getAll = async (req, res) => {
+    try {
+        const cacheData = JSON.parse(fs.readFileSync(cache, 'utf-8'));
+        if (!cacheData.results) {
+            return res.status(404).json({ message: 'result not found in cache.' });
+        }
+        return res.status(200).json(cacheData.results);
+    } catch (error) {
+        return res.status(500).json({ message: error.message });
+    }
+};
+
+const getFromDb = async (req, res) => {
+    try {
+        const results = await Result.findAll({
+            include: [
+                {
+                    model: require('../models/Relations').Work,
+                    attributes: ['name'],
+                    include: [{
+                        model: require('../models/Relations').Proposal,
+                        attributes: ['name']
+                    }]
+                },
+                {
+                    model: require('../models/Relations').ResultType,
+                    attributes: ['name']
+                },
+                {
+                    model: require('../models/Relations').Magazine,
+                    attributes: ['name', 'publisher'],
+                    required: false
+                },
+                {
+                    model: require('../models/Relations').Conference,
+                    attributes: ['name', 'city'],
+                    required: false
+                },
+                {
+                    model: require('../models/Relations').Competition,
+                    attributes: ['name'],
+                    required: false
+                }
+            ]
+        });
+        const result = results.map(item => {
+            const itemData = item.toJSON();
+            const { Work, ResultType, Magazine, Conference, Competition, ...resultData } = itemData;
+            return {
+                ...resultData,
+                work_name: Work ? Work.name : null,
+                result_type_name: ResultType ? ResultType.name : null,
+                magazine_name: Magazine ? Magazine.name : null,
+                conference_name: Conference ? Conference.name : null,
+                competition_name: Competition ? Competition.name : null,
+            };
+        });
+        return res.status(200).json(result);
+    } catch (error) {
+        console.error('Error in getFromDb result:', error);
+        return res.status(500).json({ message: error.message });
+    }
+};
+
+const deleter = async (req, res) => {
+    try {
+        const { result_Id } = req.params;
+        const result = await Result.destroy({ where: { result_Id } });
+        return res.status(200).json(result);
+    } catch (error) {
+        return res.status(500).json({ message: error.message });
+    }
+};
+
+const update = async (req, res) => {
+    try {
+        const { result_Id } = req.params;
+        const { name, year, pages, full_name, work_Id, result_type_Id, magazine_Id, conference_Id, competition_Id } = req.body;
+        const result = await Result.update({ name, year, pages, full_name, work_Id, result_type_Id, magazine_Id, conference_Id, competition_Id }, {where: {result_Id}});
+        return res.status(200).json(result);
+    } catch (error) {
+        return res.status(500).json({ message: error.message });
+    }
+}
+
+module.exports = {
+    create,
+    getAll,
+    deleter,
+    update,
+    getFromDb
+};
+
