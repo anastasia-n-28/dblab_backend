@@ -5,7 +5,7 @@ const {notUpToDate} = require('../middlewares/cache.js');
 const router = express.Router();
 
 router.post('/create', isAdmin, notUpToDate, create);
-router.get('/getAll', getAll);
+router.get('/getall', getAll);
 router.delete('/delete/:result_Id', isAdmin, notUpToDate, deleter);
 router.put('/:result_Id', isAdmin, notUpToDate, update);
 router.get('/getFromDb', isAdmin, getFromDb);
