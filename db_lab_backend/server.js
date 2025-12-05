@@ -33,6 +33,7 @@ const conferenceRoutes = require('./routes/conference.js');
 const competitionRoutes = require('./routes/competition.js');
 const resultRoutes = require('./routes/result.js');
 const statisticsRoutes = require('./routes/statistics.js');
+const reportRoutes = require('./routes/report.js');
 
 app.use(cors());
 app.use(express.json({ limit: '10mb' }));
@@ -64,6 +65,7 @@ app.use('/conference', conferenceRoutes);
 app.use('/competition', competitionRoutes);
 app.use('/result', resultRoutes);
 app.use('/statistics', statisticsRoutes);
+app.use('/report', reportRoutes);
 
 db.sequelize.sync()
     .then(() => {
