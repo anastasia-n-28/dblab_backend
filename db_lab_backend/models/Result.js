@@ -20,33 +20,26 @@ const Result = db.sequelize.define('Result', {
         allowNull: true
     },
     full_name: {
-        type: DataTypes.STRING(255),
+        type: DataTypes.STRING(500),
         allowNull: true
     },
-    work_Id: {
-        type: DataTypes.INTEGER,
+    // ОНОВЛЕНО: Поля для премодерації
+    status: {
+        type: DataTypes.ENUM('В обробці', 'Підтверджено', 'Відхилено'),
+        defaultValue: 'В обробці'
+    },
+    moderation_comment: {
+        type: DataTypes.STRING(500),
         allowNull: true
     },
-    result_type_Id: {
-        type: DataTypes.INTEGER,
-        allowNull: true
-    },
-    magazine_Id: {
-        type: DataTypes.INTEGER,
-        allowNull: true
-    },
-    conference_Id: {
-        type: DataTypes.INTEGER,
-        allowNull: true
-    },
-    competition_Id: {
-        type: DataTypes.INTEGER,
-        allowNull: true
-    },
+    work_Id: { type: DataTypes.INTEGER, allowNull: true },
+    result_type_Id: { type: DataTypes.INTEGER, allowNull: true },
+    magazine_Id: { type: DataTypes.INTEGER, allowNull: true },
+    conference_Id: { type: DataTypes.INTEGER, allowNull: true },
+    competition_Id: { type: DataTypes.INTEGER, allowNull: true }
 }, {
     tableName: 'result',
     timestamps: false
 });
 
 module.exports = Result;
-

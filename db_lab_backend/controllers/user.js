@@ -21,6 +21,11 @@ const getAll = async (req, res) => {
     }
 };
 
+const getFromDb = async (req, res) => {
+    // Для таблиці юзерів логіка така ж, як getAll
+    return getAll(req, res);
+};
+
 const deleter = async (req, res) => {
     try {
         const { user_Id } = req.params;
@@ -46,6 +51,7 @@ const update = async (req, res) => {
 module.exports = {
     create,
     getAll,
+    getFromDb,
     deleter,
     update
 };

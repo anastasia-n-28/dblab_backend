@@ -7,20 +7,30 @@ const Work = db.sequelize.define('Work', {
         primaryKey: true,
         autoIncrement: true
     },
-    attachment_date: {
-        type: DataTypes.DATE,
+    name: {
+        type: DataTypes.STRING(255),
         allowNull: true
     },
-    review: {
+    // Статус керує всім процесом
+    status: {
+        type: DataTypes.ENUM('В обробці', 'Активна', 'Завершена', 'Відхилена'),
+        defaultValue: 'В обробці' 
+    },
+    begining_date: {
+        type: DataTypes.DATE,
+        defaultValue: DataTypes.NOW
+    },
+    changes_date: {
+        type: DataTypes.DATE,
+        defaultValue: DataTypes.NOW
+    },
+    // Коментар студента при подачі або викладача при перевірці
+    review: { 
         type: DataTypes.STRING(500),
         allowNull: true
     },
     comment: {
         type: DataTypes.STRING(500),
-        allowNull: true
-    },
-    name: {
-        type: DataTypes.STRING(255),
         allowNull: true
     },
     file: {
@@ -41,4 +51,3 @@ const Work = db.sequelize.define('Work', {
 });
 
 module.exports = Work;
-

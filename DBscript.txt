@@ -146,7 +146,7 @@ CREATE TABLE proposal (
 
 CREATE TABLE work (
     work_Id INT PRIMARY KEY AUTO_INCREMENT,
-    attachment_date DATE,
+    begining_date DATE,
     review VARCHAR(500),
     comment VARCHAR(500),
     name VARCHAR(255),
