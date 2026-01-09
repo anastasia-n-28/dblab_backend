@@ -3,9 +3,9 @@ const User = require('../models/Relations').User;
 
 const create = async (req, res) => {
     try {
-        const { nickname, email, login, password, role } = req.body;
+        const { nickname, email, login, password, role, student_group } = req.body;
         const hashedPassword = await bcrypt.hash(password, 10);
-        const user = await User.create({ nickname, email, login, password:hashedPassword, role });
+        const user = await User.create({ nickname, email, login, password:hashedPassword, role, student_group });
         return res.status(201).json(user);
     } catch (error) {
         return res.status(500).json({ message: error.message });
@@ -39,9 +39,16 @@ const deleter = async (req, res) => {
 const update = async (req, res) => {
     try {
         const { user_Id } = req.params;
-        const { nickname, email, login, password, role } = req.body;
-        const hashedPassword = await bcrypt.hash(password, 10);
-        const user = await User.update({ nickname, email, login, password:hashedPassword, role }, {where: {user_Id}});
+        const { nickname, email, login, password, role, student_group } = req.body;
+        
+        const updateData = { nickname, email, login, role, student_group };
+        
+        // Хешуємо пароль тільки якщо він був переданий
+        if (password) {
+            updateData.password = await bcrypt.hash(password, 10);
+        }
+        
+        const user = await User.update(updateData, {where: {user_Id}});
         return res.status(200).json(user);
     } catch (error) {
         return res.status(500).json({ message: error.message });

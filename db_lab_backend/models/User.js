@@ -29,6 +29,10 @@ const User = db.sequelize.define('User', {
         type: DataTypes.STRING(50),
         allowNull: true
     },
+    student_group: {
+        type: DataTypes.STRING(50),
+        allowNull: true
+    },
 }, {
     tableName: 'user',
     timestamps: false

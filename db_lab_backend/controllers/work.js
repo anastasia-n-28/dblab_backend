@@ -1,17 +1,39 @@
 const path = require('path');
 const fs = require('fs');
-const { Work, Proposal, User } = require('../models/Relations'); 
+const { Work, Proposal, User, Result } = require('../models/Relations');
 
 const create = async (req, res) => {
     try {
-        const { name, review, comment, file, proposal_Id, user_Id } = req.body;
+        const { name, review, comment, file, proposal_Id, user_Id, status, begining_date } = req.body;
         
+        const work = await Work.create({ 
+            name: name || "Нова робота", 
+            review, 
+            comment, 
+            begining_date: begining_date || new Date(),
+            changes_date: new Date(),
+            file, 
+            proposal_Id, 
+            user_Id,
+            status: status || 'Активна'
+        });
+
+        if (proposal_Id) {
+            await Proposal.update({ status: 'Є записи' }, { where: { proposal_Id } });
+        }
+
+        return res.status(201).json(work);
+    } catch (error) {
+        return res.status(500).json({ message: error.message });
+    }
+};
+
+const studentCreate = async (req, res) => {
+    try {
+        const { name, review, comment, file, proposal_Id, user_Id } = req.body;
+
         const existingWork = await Work.findOne({
-            where: { 
-                user_Id, 
-                proposal_Id,
-                status: ['В обробці', 'Активна']
-            }
+            where: { user_Id, proposal_Id, status: ['В обробці', 'Активна'] }
         });
 
         if (existingWork) {
@@ -19,27 +41,24 @@ const create = async (req, res) => {
         }
 
         const work = await Work.create({ 
-            name: name || "Нова заявка", 
-            review: review || "Очікує розгляду", 
-            comment, 
+            name: name || "Заявка на тему", 
+            review: "Очікує розгляду", 
+            comment: comment || "Заявка через сайт",
             begining_date: new Date(),
             changes_date: new Date(),
-            file, 
+            file: "",
             proposal_Id, 
             user_Id,
             status: 'В обробці'
         });
 
         if (proposal_Id) {
-            await Proposal.update(
-                { status: 'Є записи' },
-                { where: { proposal_Id: proposal_Id } }
-            );
+            await Proposal.update({ status: 'Є записи' }, { where: { proposal_Id } });
         }
 
         return res.status(201).json(work);
     } catch (error) {
-        console.error("SERVER ERROR in create work:", error);
+        console.error("Error in studentCreate:", error); // Логування помилки
         return res.status(500).json({ message: error.message });
     }
 };
@@ -96,7 +115,7 @@ const getFromDb = async (req, res) => {
                 },
                 {
                     model: User,
-                    attributes: ['login', 'email']
+                    attributes: ['nickname', 'email'] 
                 }
             ]
         });
@@ -116,11 +135,54 @@ const deleter = async (req, res) => {
     }
 };
 
+const studentDelete = async (req, res) => {
+    try {
+        const { work_Id } = req.params;
+        const user_Id = req.user ? req.user.id : req.body.user_Id; 
+
+        const work = await Work.findOne({ 
+            where: { 
+                work_Id, 
+                status: ['В обробці', 'Відхилена']
+            } 
+        });
+
+        if (!work) {
+            return res.status(404).json({ message: "Заявку не знайдено або вона вже активна і її не можна видалити." });
+        }
+
+        await Result.destroy({ where: { work_Id } });
+
+        await work.destroy();
+
+        return res.status(200).json({ message: "Заявку та всі чернетки результатів успішно видалено." });
+
+    } catch (error) {
+        console.error("Delete error:", error);
+        return res.status(500).json({ message: error.message });
+    }
+};
+
 const update = async (req, res) => {
     try {
         const { work_Id } = req.params;
-        const { begining_date, review, comment, name, file, proposal_Id, user_Id } = req.body;
-        const work = await Work.update({ begining_date, review, comment, name, file, proposal_Id, user_Id }, {where: {work_Id}});
+        const { status, begining_date, review, comment, name, file, proposal_Id, user_Id } = req.body;
+        
+        const updateData = { 
+            status,
+            begining_date, 
+            review, 
+            comment, 
+            name, 
+            file, 
+            proposal_Id, 
+            user_Id,
+            changes_date: new Date()
+        };
+
+        Object.keys(updateData).forEach(key => updateData[key] === undefined && delete updateData[key]);
+
+        const work = await Work.update(updateData, { where: { work_Id } });
         return res.status(200).json(work);
     } catch (error) {
         return res.status(500).json({ message: error.message });
@@ -129,8 +191,12 @@ const update = async (req, res) => {
 
 module.exports = {
     create,
+    studentCreate,
+    updateStatus,
+    getMyWorks,
     getAll,
     deleter,
+    studentDelete,
     update,
     getFromDb
 };

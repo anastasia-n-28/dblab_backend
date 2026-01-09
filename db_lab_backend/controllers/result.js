@@ -1,13 +1,64 @@
 const path = require('path');
 const fs = require('fs');
 const cache = path.join(__dirname, '..', 'cache.json');
-const Result = require('../models/Relations').Result;
+const { Result, Work } = require('../models/Relations');
 
 const create = async (req, res) => {
     try {
         const { name, year, pages, full_name, work_Id, result_type_Id, magazine_Id, conference_Id, competition_Id } = req.body;
         const result = await Result.create({ name, year, pages, full_name, work_Id, result_type_Id, magazine_Id, conference_Id, competition_Id });
         return res.status(201).json(result);
+    } catch (error) {
+        return res.status(500).json({ message: error.message });
+    }
+};
+
+const studentCreate = async (req, res) => {
+    try {
+        const { name, year, pages, full_name, work_Id, result_type_Id, magazine_Id, conference_Id, competition_Id } = req.body;
+
+        const result = await Result.create({
+            name,
+            year,
+            pages,
+            full_name,
+            work_Id,
+            result_type_Id,
+            magazine_Id,
+            conference_Id,
+            competition_Id,
+            status: 'В обробці' // Дефолтний статус
+        });
+
+        return res.status(201).json(result);
+    } catch (error) {
+        return res.status(500).json({ message: error.message });
+    }
+};
+
+const getMyResults = async (req, res) => {
+    try {
+        const { work_Id } = req.params;
+        const results = await Result.findAll({
+            where: { work_Id }
+        });
+        return res.status(200).json(results);
+    } catch (error) {
+        return res.status(500).json({ message: error.message });
+    }
+};
+
+const updateStatus = async (req, res) => {
+    try {
+        const { result_Id } = req.params;
+        const { status, moderation_comment } = req.body;
+
+        await Result.update(
+            { status, moderation_comment },
+            { where: { result_Id } }
+        );
+
+        return res.status(200).json({ message: "Статус оновлено" });
     } catch (error) {
         return res.status(500).json({ message: error.message });
     }
@@ -103,8 +154,17 @@ const deleter = async (req, res) => {
 const update = async (req, res) => {
     try {
         const { result_Id } = req.params;
-        const { name, year, pages, full_name, work_Id, result_type_Id, magazine_Id, conference_Id, competition_Id } = req.body;
-        const result = await Result.update({ name, year, pages, full_name, work_Id, result_type_Id, magazine_Id, conference_Id, competition_Id }, {where: {result_Id}});
+        const { status, moderation_comment, name, year, pages, full_name, work_Id, result_type_Id, magazine_Id, conference_Id, competition_Id } = req.body;
+        
+        const updateData = { 
+            status,
+            moderation_comment,
+            name, year, pages, full_name, work_Id, result_type_Id, magazine_Id, conference_Id, competition_Id 
+        };
+
+        Object.keys(updateData).forEach(key => updateData[key] === undefined && delete updateData[key]);
+
+        const result = await Result.update(updateData, { where: { result_Id } });
         return res.status(200).json(result);
     } catch (error) {
         return res.status(500).json({ message: error.message });
@@ -113,9 +173,11 @@ const update = async (req, res) => {
 
 module.exports = {
     create,
+    studentCreate,
+    getMyResults,
+    updateStatus,
     getAll,
     deleter,
     update,
     getFromDb
 };
-
